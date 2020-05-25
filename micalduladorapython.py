@@ -1,6 +1,45 @@
 from tkinter import *
 from math import *
 
+from calculadoraLib import suma, resta, multiplicacion, division, raiz
+def recolectar_data_suma():
+    num1_data=int(num1.get())
+    num2_data=int(num2.get())
+    respuesta_total=suma(num1_data,num2_data)
+    respuesta.set(respuesta_total)
+
+def recolectar_data_resta():
+    num1_data=int(num1.get())
+    num2_data=int(num2.get())
+    respuesta_total=resta(num1_data,num2_data)
+    respuesta.set(respuesta_total)
+
+def recolectar_data_multiplicaion():
+    num1_data=int(num1.get())
+    num2_data=int(num2.get())
+    respuesta_total=multiplicacion(num1_data,num2_data)
+    respuesta.set(respuesta_total)
+
+def recolectar_data_division():
+    num1_data=int(num1.get())
+    num2_data=int(num2.get())
+    if (num2_data>0):
+        respuesta_total=division(num1_data,num2_data)
+        respuesta.set(round((respuesta_total * 100000.0) / 100000.0, 5))
+    else:
+        respuesta.set("ERROR")
+        
+def recolectar_data_raiz():
+    num2.set("")
+    num1_data=int(num1.get())
+    respuesta_total=raiz(num1_data)
+    respuesta.set(round((respuesta_total * 100000.0) / 100000.0, 5))
+
+def limpiar():
+    respuesta_total=""
+    num1.set(respuesta_total)
+    num2.set(respuesta_total)
+    respuesta.set(respuesta_total)
 
 
 colorFondo="#0F65EA"
