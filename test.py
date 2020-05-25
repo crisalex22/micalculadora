@@ -1,4 +1,4 @@
-from calculadoraLib import suma, resta, multiplicacion, division
+from calculadoraLib import suma, resta, multiplicacion, division, raiz
 
 def test_suma():
 	#arrange
