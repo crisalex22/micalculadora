@@ -1,4 +1,4 @@
-from calculadoraLib import suma, resta, multiplicacion
+from calculadoraLib import suma, resta, multiplicacion, division
 
 def test_suma():
 	#arrange
@@ -39,8 +39,22 @@ def test_multiplicacion():
         else:
             print("Error de la funcion multiplicacion deberia ser ",v[0]," + ",v[1]," = ",vectorespuesta[n],"pero se tiene almacenado ",v[2])
 
+def test_division():
+        #arrange
+    vectordata=[[10,5,2],[6,3,2],[3,1,3]]
+    vectorespuesta=[]
+    #act
+    for n,v in enumerate(vectordata):
+        vectorespuesta.append(division(v[0],v[1]))
+    #assert
+        if v[2]==vectorespuesta[n]:
+            print("La funcion division es correcta: ",v[0]," + ", v[1]," =",vectorespuesta[n])
+        else:
+            print("Error de la funcion division deberia ser ",v[0]," + ",v[1]," = ",vectorespuesta[n],"pero se tiene almacenado ",v[2])
+
 
 if __name__ == '__main__':
 	test_suma()
 	test_resta()
 	test_multiplicacion()
+	test_division()
