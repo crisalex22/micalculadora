@@ -52,6 +52,19 @@ def test_division():
         else:
             print("Error de la funcion division deberia ser ",v[0]," + ",v[1]," = ",vectorespuesta[n],"pero se tiene almacenado ",v[2])
 
+def test_raiz():
+    #arrange
+    vectordata=[[9,3],[16,4],[25,5]]
+    vectorespuesta=[]
+    #act
+    for n,v in enumerate(vectordata):
+        vectorespuesta.append(raiz(v[0]))
+    #assert
+        if v[1]==vectorespuesta[n]:
+            print("La funcion raiz es correcta: ",v[0]," = ",vectorespuesta[n])
+        else:
+            print("Error de la funcion division deberia ser ",v[0]," = ",vectorespuesta[n],"pero se tiene almacenado ",v[2])
+
 
 if __name__ == '__main__':
 	test_suma()
