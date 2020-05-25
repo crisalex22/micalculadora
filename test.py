@@ -71,3 +71,4 @@ if __name__ == '__main__':
 	test_resta()
 	test_multiplicacion()
 	test_division()
+	test_raiz()
