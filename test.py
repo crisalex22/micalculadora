@@ -67,8 +67,24 @@ def test_raiz():
 
 
 if __name__ == '__main__':
-	test_suma()
-	test_resta()
-	test_multiplicacion()
-	test_division()
-	test_raiz()
+	opcion="S"
+	while opcion=="S" or opcion=="s":
+		print("**** TEST DE MI CALCULADORA****")
+		print("1: Suma")
+		print("2: Resta")
+		print("3: Multiplicacion")
+		print("4: Division")  
+		print("5: Raiz")  
+		opcion=int(input("Selecione una opcion: "))
+		if opcion==1:
+			test_suma()
+		elif opcion==2:
+			test_resta()
+		elif opcion==3:
+			test_multiplicacion()
+		elif opcion==4:
+			test_division()
+		elif opcion==5:
+			test_raiz()
+		opcion=input("Desea continuar S/N: ")
+	print("Se realizado los test de operaciones basicas")
